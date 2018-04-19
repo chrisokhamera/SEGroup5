@@ -38,21 +38,29 @@ namespace SEGroup5
             var FoldersToSearch = init.GetSavedFoldersFromFile(pathForSaveFolder);
             if (FoldersToSearch != null)
             {
-                if (Directory.Exists(FoldersToSearch[0].FolderName))
+                try
                 {
-                    var result = init.SearchWordFromSavedFiles(this.textReader, this.textBox1, FoldersToSearch, this);
-                    if (result != null)
+                    if (Directory.Exists(FoldersToSearch[0].FolderName))
                     {
-                        panel19.Controls.Clear();
-                        panel16.Controls.Clear();
-                        panel15.Controls.Clear();
-                        SetTableHeaders();
-                        panel16.Controls.AddRange(result.Item1.ToArray());
-                        panel19.Controls.AddRange(result.Item2.ToArray());
-                        panel15.Controls.AddRange(result.Item3.ToArray());
+                        var result = init.SearchWordFromSavedFiles(this.textReader, this.textBox1, FoldersToSearch, this);
+                        if (result != null)
+                        {
+                            panel19.Controls.Clear();
+                            panel16.Controls.Clear();
+                            panel15.Controls.Clear();
+                            SetTableHeaders();
+                            panel16.Controls.AddRange(result.Item1.ToArray());
+                            panel19.Controls.AddRange(result.Item2.ToArray());
+                            panel15.Controls.AddRange(result.Item3.ToArray());
+                        }
+
+                        return;
                     }
+                }
+
+                catch (Exception ex)
+                {
                     
-                    return;
                 }
             }
         }
@@ -347,6 +355,9 @@ namespace SEGroup5
             }
         }
 
-       
+        private void textReader_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

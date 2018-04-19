@@ -492,6 +492,7 @@
             this.textReader.Size = new System.Drawing.Size(850, 567);
             this.textReader.TabIndex = 4;
             this.textReader.Text = "";
+            this.textReader.TextChanged += new System.EventHandler(this.textReader_TextChanged);
             // 
             // panel7
             // 

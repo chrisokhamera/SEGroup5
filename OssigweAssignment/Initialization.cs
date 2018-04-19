@@ -114,7 +114,7 @@ namespace SEGroup5
             }
             return ListOfFoldersToAdd;
         }
-        //Use this method o update the file changes later tomorrow
+        //Use this method o update the file changes
         public void SaveFoldernames(FolderBrowserDialog folderDialog = null, List<string> SelectedPaths = null)
         {
             List<Folder> FolderToAddToJson = new List<Folder>();
@@ -193,7 +193,7 @@ namespace SEGroup5
                     ///with the binarywriter from the above method.
                     ///we then read back the file we created with this method.
                     ///we first read the json which we know the result and then we read the binary which we are expecting the same result as the json result
-                    ///we then deserialize it again and write to a temporary file inother to cross check our result.
+                    ///we then deserialize it again and write to a temporary file another to cross check our result.
                     var TextToWrite = JsonConvert.SerializeObject(FolderToAddToJson);
                     BinaryWriter BW = new BinaryWriter(File.Open(PathForBinary, FileMode.OpenOrCreate));
 
@@ -450,7 +450,7 @@ namespace SEGroup5
                         WordAlreadyIndexedObject.searchedFolders.ForEach(x => filePathToSearch.Add(x.folderLocation));
                     }
                 }
-                //this part instantiates the files to search by removing all files that does not end with a .txt now form the folders
+                //this part instantiates the files to search by removing all files that does not end with a .txt from the folders
                 if (foldersToSearch.Count > 0)
                 {
                     ///---Suggestions
@@ -632,7 +632,7 @@ namespace SEGroup5
             List<string> AllScript = new List<string>();
             List<string> AllAnchor = new List<string>();
             string readFile = null;
-            if (path.StartsWith("http://") || path.StartsWith("www"))
+            if (path.StartsWith("http://") || path.StartsWith("www") || path.StartsWith("https://"))
             {
                 WebClient web = new WebClient();
                 try
