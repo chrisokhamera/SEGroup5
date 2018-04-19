@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OssigweAssignment.Properties
+namespace SEGroup5.Properties
 {
 
 

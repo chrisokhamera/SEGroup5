@@ -13,14 +13,14 @@ using System.Dynamic;
 using Newtonsoft.Json.Linq;
 using System.Security.AccessControl;
 
-namespace OssigweAssignment
+namespace SEGroup5
 {
     public partial class Form1 : Form
     {
         Initialization init = new Initialization(new Folder(), new Files(), new JsonSerializer());
-        const string pathForSaveFolder = @"C:\Users\Emmanuel\Desktop\TestFolderForFiles\Json.json";
-        const string pathForSaveFile = @"C:\Users\Emmanuel\Desktop\TestFolderForFiles\savedWords.json";
-        const string PathForBinary = @"C:\Users\Emmanuel\Desktop\TestFolderForFiles\binary.bin";
+        string pathForSaveFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json.json");
+        string pathForSaveFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "savedWords.json");
+        string PathForBinary = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "binary.bin");
 
         public Form1()
         {
@@ -320,12 +320,16 @@ namespace OssigweAssignment
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Assign a variable to capture the html path that would be inputed by the user
             var Path = textBox2.Text;
-            listBox2.Items.Clear();
-            listBox3.Items.Clear();
-            listBox4.Items.Clear();
+            //listBox2.Items.Clear();
+            //listBox3.Items.Clear();
+            //listBox4.Items.Clear();
+
+            
             if (!string.IsNullOrEmpty(Path))
             {
+                //Get 
               var result =  init.GetAndReadHtmlPage(Path);
                 if (result.Item1 != null)
                 {
@@ -333,14 +337,16 @@ namespace OssigweAssignment
                 }
                 if (result.Item2 != null)
                 {
-                        listBox4.DataSource = result.Item2;
+                        listBox3.DataSource = result.Item2;
                 }
                 if (result.Item3 != null)
                 {
-                        listBox3.DataSource = result.Item3;
+                        listBox4.DataSource = result.Item3;
                 }
 
             }
         }
+
+       
     }
 }

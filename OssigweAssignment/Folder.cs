@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OssigweAssignment
+namespace SEGroup5
 {
 
     public class Folder
     {
         public Folder()
         {
-            Files =new List<OssigweAssignment.Files>();  
+            Files =new List<SEGroup5.Files>();  
         }
         public int No { get; set; }
         public string Name { get; set; }

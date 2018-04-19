@@ -11,14 +11,14 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OssigweAssignment
+namespace SEGroup5
 {
 
     public class Initialization
     {
-        const string pathForSavedFolder = @"C:\Users\Emmanuel\Desktop\TestFolderForFiles\Json.json";
-        const string pathForSaveFile = @"C:\Users\Emmanuel\Desktop\TestFolderForFiles\savedWords.json";
-        const string PathForBinary = @"C:\Users\Emmanuel\Desktop\TestFolderForFiles\binary.bin";
+        string pathForSavedFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json.json");
+        string pathForSaveFile =Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "savedWords.json");
+        string PathForBinary = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "binary.bin");
         DirectoryInfo DirectoryInfo;
         Folder folder;
         Files file;
@@ -75,7 +75,7 @@ namespace OssigweAssignment
 
                 folder = new Folder();
 
-                DirectoryInfo = new DirectoryInfo(FolderFullPath); //This code is used to the current selected directory
+                DirectoryInfo = new DirectoryInfo(FolderFullPath); //This code is used to show the current selected directory
                 var allFIlesInDirectory = DirectoryInfo.EnumerateFiles("*", SearchOption.AllDirectories).ToList();
                 var allSubDirectories = DirectoryInfo.EnumerateDirectories("*", SearchOption.AllDirectories);
                 int counter = 1;

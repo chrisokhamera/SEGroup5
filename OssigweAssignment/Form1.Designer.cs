@@ -1,4 +1,4 @@
-﻿namespace OssigweAssignment
+﻿namespace SEGroup5
 {
     partial class Form1
     {
@@ -79,16 +79,16 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -379,9 +379,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(4, 149);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(137, 19);
+            this.label5.Size = new System.Drawing.Size(130, 19);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Total indexed word";
+            this.label5.Text = "Total indexed word:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label16
@@ -389,9 +389,9 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.Location = new System.Drawing.Point(144, 65);
+            this.label16.Location = new System.Drawing.Point(158, 65);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 19);
+            this.label16.Size = new System.Drawing.Size(119, 19);
             this.label16.TabIndex = 10;
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -411,9 +411,9 @@
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.Location = new System.Drawing.Point(140, 120);
+            this.label14.Location = new System.Drawing.Point(161, 120);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(137, 19);
+            this.label14.Size = new System.Drawing.Size(116, 19);
             this.label14.TabIndex = 8;
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -456,9 +456,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(4, 65);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 13);
+            this.label6.Size = new System.Drawing.Size(148, 13);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Longest Word Search:";
+            this.label6.Text = "Longest Searched Word:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -538,9 +538,9 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.Location = new System.Drawing.Point(124, 149);
+            this.label18.Location = new System.Drawing.Point(179, 149);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(207, 18);
+            this.label18.Size = new System.Drawing.Size(152, 18);
             this.label18.TabIndex = 12;
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -562,9 +562,9 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.Location = new System.Drawing.Point(143, 38);
+            this.label20.Location = new System.Drawing.Point(176, 38);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(203, 18);
+            this.label20.Size = new System.Drawing.Size(170, 18);
             this.label20.TabIndex = 10;
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -573,9 +573,9 @@
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.Location = new System.Drawing.Point(159, 71);
+            this.label21.Location = new System.Drawing.Point(179, 71);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(187, 18);
+            this.label21.Size = new System.Drawing.Size(167, 18);
             this.label21.TabIndex = 9;
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -584,9 +584,9 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.Location = new System.Drawing.Point(140, 112);
+            this.label22.Location = new System.Drawing.Point(179, 112);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(207, 18);
+            this.label22.Size = new System.Drawing.Size(168, 18);
             this.label22.TabIndex = 8;
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -615,9 +615,9 @@
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(3, 38);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(134, 18);
+            this.label26.Size = new System.Drawing.Size(156, 18);
             this.label26.TabIndex = 3;
-            this.label26.Text = "Longest Word Search:";
+            this.label26.Text = "Longest Searched Word:";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label17
@@ -681,70 +681,16 @@
             this.panel4.Size = new System.Drawing.Size(1125, 571);
             this.panel4.TabIndex = 0;
             // 
-            // label29
+            // button3
             // 
-            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(50, 45);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(322, 23);
-            this.label29.TabIndex = 2;
-            this.label29.Text = "Script Tag";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(50, 296);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(322, 23);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "A Tag";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(800, 45);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(322, 23);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Title Tag";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(800, 71);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(322, 472);
-            this.listBox2.TabIndex = 3;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(50, 71);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(710, 212);
-            this.listBox3.TabIndex = 4;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(50, 338);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(710, 212);
-            this.listBox4.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(283, 12);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(540, 23);
-            this.textBox2.TabIndex = 6;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(874, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(190, 23);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Extract Tags";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label30
             // 
@@ -757,16 +703,70 @@
             this.label30.Text = "Enter Url To Html page";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // textBox2
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(874, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Extract Tags";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.textBox2.Location = new System.Drawing.Point(283, 12);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(540, 23);
+            this.textBox2.TabIndex = 6;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(50, 338);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(710, 212);
+            this.listBox4.TabIndex = 5;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(50, 71);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(710, 212);
+            this.listBox3.TabIndex = 4;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(800, 71);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(322, 472);
+            this.listBox2.TabIndex = 3;
+            // 
+            // label29
+            // 
+            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(50, 45);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(322, 23);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "Script Tag(s)";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(50, 296);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(322, 23);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Anchor Tag(s)";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(800, 45);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(322, 23);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Title Tag";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 

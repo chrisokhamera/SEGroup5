@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OssigweAssignment
+namespace SEGroup5
 {
     public enum labelType
     {

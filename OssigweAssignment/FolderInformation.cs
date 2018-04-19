@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OssigweAssignment
+namespace SEGroup5
 {
     public class FolderInformation
     {
