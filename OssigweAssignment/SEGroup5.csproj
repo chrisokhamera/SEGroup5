@@ -72,11 +72,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ControlInitializer.cs" />
-    <Compile Include="ReportClass.cs" />
-    <Compile Include="SearchClass.cs" />
     <Compile Include="searchedFile.cs" />
     <Compile Include="SearchedWord.cs" />
-    <Compile Include="UnusedCode.cs" />
     <EmbeddedResource Include="DesignForm.resx">
       <DependentUpon>DesignForm.cs</DependentUpon>
     </EmbeddedResource>
