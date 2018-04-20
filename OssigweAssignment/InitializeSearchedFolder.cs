@@ -56,13 +56,13 @@ namespace SEGroup5
                 UpdateProgressBar(progressBar);
             } 
         }
-        public void UpdateProgressBar(ProgressBar progressBar1)
+        public void UpdateProgressBar(ProgressBar progressBarMonitored)
         {
-            if (progressBar1.Value < progressBar1.Maximum)
+            if (progressBarMonitored.Value < progressBarMonitored.Maximum)
             {
-                progressBar1.Value++;
-                int percent = (int)(((double)progressBar1.Value / (double)progressBar1.Maximum) * 100);
-                progressBar1.CreateGraphics().DrawString(percent.ToString() + "%", new Font("Arial", (float)8.25, FontStyle.Regular), Brushes.Black, new PointF(progressBar1.Width / 2 - 10, progressBar1.Height / 2 - 7));
+                progressBarMonitored.Value++;
+                int percent = (int)(((double)progressBarMonitored.Value / (double)progressBarMonitored.Maximum) * 100);
+                progressBarMonitored.CreateGraphics().DrawString(percent.ToString() + "%", new Font("Arial", (float)8.25, FontStyle.Regular), Brushes.Black, new PointF(progressBarMonitored.Width / 2 - 10, progressBarMonitored.Height / 2 - 7));
 
                 Application.DoEvents();
             }

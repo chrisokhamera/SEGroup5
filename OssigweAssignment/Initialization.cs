@@ -41,6 +41,7 @@ namespace SEGroup5
             FoldersFromFile = new List<Folder>();
         }
 
+        //Anoop
         public FolderBrowserDialog PopulateFolderView()
         {
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog()
@@ -450,12 +451,12 @@ namespace SEGroup5
                         WordAlreadyIndexedObject.searchedFolders.ForEach(x => filePathToSearch.Add(x.folderLocation));
                     }
                 }
-                //this part instantiates the files to search by removing all files that does not end with a .txt from the folders
+                //this part instantiates the files to index by removing all files that does not end with a .txt from the folders
                 if (foldersToSearch.Count > 0)
                 {
                     ///---Suggestions
                     ///you can try making this code more optimized by also limiting the folders to go through first
-                    ///by considering if the folder has been modified and if not if the previous search root folder includes it 
+                    ///by considering if the folder has been modified and if not if the previous index root folder includes it 
                     ///
                     ///---Suggestions
                     ///
@@ -479,7 +480,7 @@ namespace SEGroup5
                     if (File.Exists(currentFolderToSearch))
                     {
 
-                        //this just reads the lines one after the other to search line by line at first
+                        //this just reads the lines one after the other to index line by line at first
                         var allTextRead = File.ReadLines(currentFolderToSearch).ToList();
                         var FullText = File.ReadAllText(currentFolderToSearch);
 
@@ -500,14 +501,14 @@ namespace SEGroup5
                                         if (matchFound == false)
                                         {
                                             firstLineofWord = allTextRead[stringItem];
-                                            Label label2 = (Label)controlInit.CreateControlForSearchResult(yAxisForFile, currentFolderToSearch, labelType.col2);
+                                            Label lblSearch = (Label)controlInit.CreateControlForSearchResult(yAxisForFile, currentFolderToSearch, labelType.col2);
                                             LinkLabel linkLabel = (LinkLabel)controlInit.CreateControlForSearchResult(yAxisForView, allTextRead[stringItem], labelType.col1, form);
                                             LineNoForFirstMatch = stringItem;
                                             matchFound = true;
                                             foundWordAndFolder.Add(currentFolderToSearch);
                                             linkLabel.Links[0].LinkData = currentFolderToSearch + ">" + textBox.Text;
                                             ViewFound.Add(linkLabel);
-                                            FoundItems.Add(label2);
+                                            FoundItems.Add(lblSearch);
                                         }
                                     }
                                     loopBreaker = stringItem;

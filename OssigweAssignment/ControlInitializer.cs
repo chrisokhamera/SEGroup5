@@ -26,7 +26,7 @@ namespace SEGroup5
                     Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
                     BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle,
                     Location = new System.Drawing.Point(3, yAxis),
-                    Name = "label10",
+                    Name = "lblShortestIndexedWord",
                     Size = new System.Drawing.Size(729, 25),
                     TabIndex = 1,
                     Text = labelText,

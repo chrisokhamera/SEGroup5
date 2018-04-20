@@ -25,13 +25,13 @@ namespace SEGroup5
         public Form1()
         {
             InitializeComponent();
-            treeView1.Nodes.Clear();
+            tvMonitored.Nodes.Clear();
             toolTip1.ShowAlways = true;
-            progressBar1.Value = 0;
-            init.InitializeLinkListsForFile(this.panel5, this.treeView1, this.progressBar1);
+            progressBarMonitored.Value = 0;
+            init.InitializeLinkListsForFile(this.panel5, this.tvMonitored, this.progressBarMonitored);
             ReportManager();
             //init.ReadHtmlpage(@"C:\Users\Emmanuel\Desktop\test.html");
-            //this.progressBar1.Hide();
+            //this.progressBarMonitored.Hide();
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -42,16 +42,16 @@ namespace SEGroup5
                 {
                     if (Directory.Exists(FoldersToSearch[0].FolderName))
                     {
-                        var result = init.SearchWordFromSavedFiles(this.textReader, this.textBox1, FoldersToSearch, this);
+                        var result = init.SearchWordFromSavedFiles(this.textReader, this.txtSearch, FoldersToSearch, this);
                         if (result != null)
                         {
-                            panel19.Controls.Clear();
-                            panel16.Controls.Clear();
-                            panel15.Controls.Clear();
+                            pnlCount.Controls.Clear();
+                            pnlFoundFiles.Controls.Clear();
+                            pnlView.Controls.Clear();
                             SetTableHeaders();
-                            panel16.Controls.AddRange(result.Item1.ToArray());
-                            panel19.Controls.AddRange(result.Item2.ToArray());
-                            panel15.Controls.AddRange(result.Item3.ToArray());
+                            pnlFoundFiles.Controls.AddRange(result.Item1.ToArray());
+                            pnlCount.Controls.AddRange(result.Item2.ToArray());
+                            pnlView.Controls.AddRange(result.Item3.ToArray());
                         }
 
                         return;
@@ -66,34 +66,34 @@ namespace SEGroup5
         }
         public void SetTableHeaders()
         {
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(740, 33);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Found Files";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            panel16.Controls.Add(label7);
+            this.lblFoundFiles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFoundFiles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFoundFiles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoundFiles.Location = new System.Drawing.Point(0, 0);
+            this.lblFoundFiles.Name = "lblFoundFiles";
+            this.lblFoundFiles.Size = new System.Drawing.Size(740, 33);
+            this.lblFoundFiles.TabIndex = 0;
+            this.lblFoundFiles.Text = "Found Files";
+            this.lblFoundFiles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            pnlFoundFiles.Controls.Add(lblFoundFiles);
 
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(-1, -1);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 34);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Count";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            panel19.Controls.Add(label8);
+            this.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(-1, -1);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(86, 34);
+            this.lblCount.TabIndex = 0;
+            this.lblCount.Text = "Count";
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            pnlCount.Controls.Add(lblCount);
 
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(-1, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 33);
-            this.label9.TabIndex = 1;
-            this.panel15.Controls.Add(label9);
+            this.lblView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblView.Location = new System.Drawing.Point(-1, 0);
+            this.lblView.Name = "lblView";
+            this.lblView.Size = new System.Drawing.Size(86, 33);
+            this.lblView.TabIndex = 1;
+            this.pnlView.Controls.Add(lblView);
 
         }
 
@@ -143,52 +143,52 @@ namespace SEGroup5
             tabControl2.SelectTab(1);
 
             //this is used for the reporting side bar
-            label13.Text = arrayOfStringToUser[1];
+            lblSearchedWord1.Text = arrayOfStringToUser[1];
             ReportManager();
         }
 
         private void OpenFile_Click(object sender, EventArgs e)
         {
             //this responds to the click event of the AddFolderToMonitor button
-            treeView1.Nodes.Clear();
+            tvMonitored.Nodes.Clear();
             toolTip1.ShowAlways = true;
-            progressBar1.Value = 0;
+            progressBarMonitored.Value = 0;
             var SelectedFolderObject = init.PopulateFolderView();
             if (SelectedFolderObject != null)
             {
             init.SaveFoldernames(SelectedFolderObject);
             }
-            init.InitializeLinkListsForFile(this.panel5, this.treeView1, this.progressBar1);
+            init.InitializeLinkListsForFile(this.panel5, this.tvMonitored, this.progressBarMonitored);
             ReportManager();
         }
 
         private void treeView1_MouseMove(object sender, MouseEventArgs e)
         {
             // Get the node at the current mouse pointer location.  
-            TreeNode theNode = this.treeView1.GetNodeAt(e.X, e.Y);
+            TreeNode theNode = this.tvMonitored.GetNodeAt(e.X, e.Y);
 
             // Set a ToolTip only if the mouse pointer is actually paused on a node.  
             if (theNode != null && theNode.Tag != null)
             {
                 // Change the ToolTip only if the pointer moved to a new node.  
-                if (theNode.Tag.ToString() != this.toolTip1.GetToolTip(this.treeView1))
-                    this.toolTip1.SetToolTip(this.treeView1, theNode.Tag.ToString());
+                if (theNode.Tag.ToString() != this.toolTip1.GetToolTip(this.tvMonitored))
+                    this.toolTip1.SetToolTip(this.tvMonitored, theNode.Tag.ToString());
 
             }
             // Pointer is not over a node so clear the ToolTip.
             else
             {
-                this.toolTip1.SetToolTip(this.treeView1, "");
+                this.toolTip1.SetToolTip(this.tvMonitored, "");
             }
         }
         private void RemoveTreeNode()
         {
-            var fileName = this.treeView1.Nodes.Count;
+            var fileName = this.tvMonitored.Nodes.Count;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            RemoveCheckedNodes(this.treeView1.Nodes);
+            RemoveCheckedNodes(this.tvMonitored.Nodes);
         }
         List<TreeNode> CheckedNodes = new List<TreeNode>();
         List<string> FolderNamesToRemove = new List<string>();
@@ -281,7 +281,7 @@ namespace SEGroup5
 
         void ReportManager()
         {
-            listBox1.Items.Clear();
+            lbTopSearchView.Items.Clear();
             string AllIndexedWord = "";
             long TotalIndexedWord = 0;
             List<Folder> ListOfFolders = new List<Folder>();
@@ -301,21 +301,21 @@ namespace SEGroup5
                
                 //var aa = ListOfFolders[0].Files;
                 //var bb = aa.Sum(x => x.FileLength);
-                var ListOfSearchedWords = JsonConvert.DeserializeObject<List<SearchedWord>>(allSearchText);
-                var mostSearchedOrder = ListOfSearchedWords.OrderByDescending(x => x.NoOfSearchedTime).ToArray();
-                var highestWordOder = ListOfSearchedWords.OrderByDescending(x => x.Word.Length).ToArray();
-                label14.Text = label22.Text =  mostSearchedOrder[0].Word;
-                label16.Text = label20.Text =  highestWordOder[0].Word;
-                label15.Text = label21.Text= highestWordOder[highestWordOder.Length - 1].Word;
+                var ListOfIndexedWords = JsonConvert.DeserializeObject<List<SearchedWord>>(allSearchText);
+                var mostIndexedOrder = ListOfIndexedWords.OrderByDescending(x => x.NoOfSearchedTime).ToArray();
+                var highestWordOder = ListOfIndexedWords.OrderByDescending(x => x.Word.Length).ToArray();
+                label14.Text = lblMosttIndexedWord3.Text =  mostIndexedOrder[0].Word;
+                lblLSWord1.Text = label20.Text =  highestWordOder[0].Word;
+                lblShortestIndexedWord1.Text = lblShortestIndexedWord3.Text= highestWordOder[highestWordOder.Length - 1].Word;
                 
-                label12.Text = label18.Text =  TotalIndexedWord.ToString();
+                label12.Text = lblTotalIndexedWords3.Text =  TotalIndexedWord.ToString();
                 int count = 1;
-                foreach (var item in mostSearchedOrder.OrderByDescending(X=>X.searchedTime))
+                foreach (var item in mostIndexedOrder.OrderByDescending(X=>X.searchedTime))
                 {
                     if (count <26)
                     {
                         string valueToAdd = $"{count}- Word: {item.Word}, \n Time- {item.searchedTime.ToLocalTime()}";
-                        listBox1.Items.Add(valueToAdd);
+                        lbTopSearchView.Items.Add(valueToAdd);
                     }
                     else
                     {
@@ -329,10 +329,10 @@ namespace SEGroup5
         private void button3_Click(object sender, EventArgs e)
         {
             //Assign a variable to capture the html path that would be inputed by the user
-            var Path = textBox2.Text;
-            //listBox2.Items.Clear();
-            //listBox3.Items.Clear();
-            //listBox4.Items.Clear();
+            var Path = txtURLSearch.Text;
+            //lbTitleView.Items.Clear();
+            //lbScriptView.Items.Clear();
+            //lbAnchorView.Items.Clear();
 
             
             if (!string.IsNullOrEmpty(Path))
@@ -341,21 +341,31 @@ namespace SEGroup5
               var result =  init.GetAndReadHtmlPage(Path);
                 if (result.Item1 != null)
                 {
-                        listBox2.DataSource = result.Item1;  
+                        lbTitleView.DataSource = result.Item1;  
                 }
                 if (result.Item2 != null)
                 {
-                        listBox3.DataSource = result.Item2;
+                        lbScriptView.DataSource = result.Item2;
                 }
                 if (result.Item3 != null)
                 {
-                        listBox4.DataSource = result.Item3;
+                        lbAnchorView.DataSource = result.Item3;
                 }
 
             }
         }
 
         private void textReader_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
         }
